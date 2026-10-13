@@ -19,7 +19,6 @@ export async function generateMetadata({
     title: lookup.status === "found" ? lookup.product.name : "পণ্যের বিস্তারিত",
   };
 }
-
 function priceUnit(unit: string): string {
   if (unit.includes("কেজি")) return "টাকা / কেজি";
   if (unit.includes("লিটার")) return "টাকা / লিটার";
