@@ -158,7 +158,7 @@ export default function AuthForm({ mode }: { mode: Mode }) {
           );
           return;
         }
-        toastOnce("success", "সফলভাবে সাইন ইন হয়েছে");
+        toastOnce("success", "সফলভাবে সাইন ইন হয়েছে", 3200);
         router.push(callbackURL);
         router.refresh();
       }
