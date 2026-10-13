@@ -1,7 +1,6 @@
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "@better-auth/mongo-adapter";
 import { mongoClient, mongoDb } from "@/lib/mongodb";
-
 const defaultAppUrl = "http://localhost:3000";
 const configuredAppUrl =
   process.env.NEXT_PUBLIC_APP_URL?.trim() ||
