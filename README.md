@@ -268,7 +268,7 @@ The interface is Bengali-first and uses a pale sage page background, light borde
 3. Add the required production environment variables from [Environment Variables](#-environment-variables) under the Vercel project’s **Settings → Environment Variables**. `.env.local` is not uploaded automatically.
 4. Confirm MongoDB Atlas network access permits connections from the deployment, and use a dedicated database user.
 5. Set both `BETTER_AUTH_URL` and `NEXT_PUBLIC_APP_URL` to the deployed application origin. Keep `BETTER_AUTH_SECRET` strong and private.
-6. If using Google or GitHub sign-in, configure the production callback URL for each provider and add its credentials to Vercel.
+6. For Google sign-in, add `http://localhost:3000/api/auth/callback/google` as an authorized redirect URI in Google Cloud for local testing. Add `https://YOUR_VERCEL_DOMAIN/api/auth/callback/google` for production, replacing the hostname with the exact Vercel or custom domain. Add the corresponding site origins (without `/api/auth/callback/google`) as authorized JavaScript origins. Set `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` in `.env.local` and Vercel. Configure GitHub’s callback URL using the same Better Auth callback path for GitHub.
 7. Redeploy after adding or changing environment variables.
 8. Test the homepage, categories, product details, registration, sign-in, sign-out, and profile update on the deployed site.
 

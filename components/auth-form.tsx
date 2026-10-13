@@ -176,7 +176,11 @@ export default function AuthForm({ mode }: { mode: Mode }) {
     if (busy) return;
     setBusy(true);
     try {
-      const result = await authClient.signIn.social({ provider, callbackURL });
+      const result = await authClient.signIn.social({
+        provider,
+        callbackURL,
+        errorCallbackURL: `/signin?callbackURL=${encodeURIComponent(callbackURL)}`,
+      });
       if (result.error)
         toastOnce(
           "error",
