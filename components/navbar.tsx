@@ -33,6 +33,26 @@ export default function Navbar() {
   const { data: session } = authClient.useSession();
 
   useEffect(() => {
+    const url = new URL(window.location.href);
+    const signedInWith = url.searchParams.get("signedIn");
+    if (
+      signedInWith !== "email" &&
+      signedInWith !== "google" &&
+      signedInWith !== "github"
+    ) {
+      return;
+    }
+
+    url.searchParams.delete("signedIn");
+    window.history.replaceState(
+      window.history.state,
+      "",
+      `${url.pathname}${url.search}${url.hash}`,
+    );
+    toastOnce("success", "সফলভাবে সাইন ইন হয়েছে", 3200);
+  }, [pathname]);
+
+  useEffect(() => {
     if (!profileMenuOpen) return;
     const closeOnOutsideClick = (event: MouseEvent) => {
       if (

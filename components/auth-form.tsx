@@ -29,6 +29,15 @@ function safeCallbackURL(value: string | null): string {
   }
 }
 
+function withSignInSuccess(
+  callbackURL: string,
+  provider: "email" | "google" | "github",
+) {
+  const destination = new URL(callbackURL, "https://bazardor.invalid");
+  destination.searchParams.set("signedIn", provider);
+  return `${destination.pathname}${destination.search}${destination.hash}`;
+}
+
 function GoogleMark() {
   return (
     <svg aria-hidden="true" viewBox="0 0 48 48" className="social-google-mark">
@@ -158,8 +167,7 @@ export default function AuthForm({ mode }: { mode: Mode }) {
           );
           return;
         }
-        toastOnce("success", "সফলভাবে সাইন ইন হয়েছে", 3200);
-        router.push(callbackURL);
+        router.push(withSignInSuccess(callbackURL, "email"));
         router.refresh();
       }
     } catch {
@@ -178,18 +186,13 @@ export default function AuthForm({ mode }: { mode: Mode }) {
     try {
       const result = await authClient.signIn.social({
         provider,
-        callbackURL,
+        callbackURL: withSignInSuccess(callbackURL, provider),
         errorCallbackURL: `/signin?callbackURL=${encodeURIComponent(callbackURL)}`,
       });
       if (result.error)
         toastOnce(
           "error",
           result.error.message || "সোশ্যাল লগইন শুরু করা যায়নি",
-        );
-      else
-        toastOnce(
-          "success",
-          `${provider === "google" ? "Google" : "GitHub"} লগইন শুরু হচ্ছে…`,
         );
     } catch {
       toastOnce(
