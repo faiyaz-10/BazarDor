@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="245" viewBox="0 0 300 245" fill="none">
+  <ellipse cx="150" cy="224" rx="98" ry="12" fill="#DDE5DE"/>
+  <!-- leafy stems -->
+  <path d="M151 92C150 69 142 55 128 45M160 89C160 61 176 42 194 36M178 86C188 69 207 66 221 73" stroke="#138B4C" stroke-width="5" stroke-linecap="round"/>
+  <path d="M128 45C117 43 110 50 112 62C123 62 131 54 128 45Z" fill="#168D4F"/>
+  <path d="M194 36C190 22 179 19 169 26C175 37 186 42 194 36Z" fill="#168D4F"/>
+  <path d="M221 73C231 64 244 69 245 82C234 87 224 83 221 73Z" fill="#168D4F"/>
+  <!-- tomato at left -->
+  <path d="M69 124C60 103 73 81 94 82C104 67 128 75 134 93C149 109 136 137 113 146L83 143C72 139 68 132 69 124Z" fill="#F54E49"/>
+  <path d="M95 83C88 71 96 63 108 68C113 73 111 81 105 87" fill="#14964E"/>
+  <ellipse cx="87" cy="103" rx="8" ry="14" transform="rotate(27 87 103)" fill="#FF9185"/>
+  <!-- large green produce -->
+  <path d="M117 115C108 88 124 58 151 56C179 54 196 76 190 105C186 128 170 148 146 150C130 148 121 136 117 115Z" fill="#12B85B"/>
+  <path d="M148 58C145 46 151 35 162 28C162 42 158 51 148 58Z" fill="#0E9650"/>
+  <path d="M151 56C148 39 133 32 120 34C127 48 138 55 151 56Z" fill="#0E9650"/>
+  <ellipse cx="137" cy="87" rx="8" ry="13" transform="rotate(24 137 87)" fill="#8AE5AC"/>
+  <!-- orange/yellow produce at right -->
+  <path d="M189 117C185 100 197 86 215 88C233 90 241 108 231 123C222 136 201 137 191 126Z" fill="#FFA90B"/>
+  <path d="M208 89C207 81 212 75 220 74C220 82 216 87 208 89Z" fill="#158D4C"/>
+  <!-- front peppers/tomatoes -->
+  <path d="M44 153C32 141 37 124 52 120C66 113 81 126 79 141C77 157 57 164 44 153Z" fill="#B94BEB"/>
+  <path d="M91 153C81 142 86 124 102 120C117 117 132 130 127 145C122 161 103 164 91 153Z" fill="#FF5B28"/>
+  <path d="M143 157C130 146 137 129 151 124C167 119 181 131 178 146C175 162 155 167 143 157Z" fill="#F5C531"/>
+  <!-- basket rim -->
+  <path d="M38 157H253L244 174H47L38 157Z" fill="#8E4514"/>
+  <path d="M49 168H243L232 211C230 218 223 222 215 222H77C69 222 62 218 60 210L49 168Z" fill="#BD620E"/>
+  <path d="M49 168H243L240 180H52L49 168Z" fill="#D17A20"/>
+  <!-- basket slats -->
+  <path d="M77 181L82 216M113 181L116 220M150 181V221M187 181L184 220M223 181L218 216" stroke="#87420E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M53 171H240" stroke="#7C3A0D" stroke-width="3"/>
+</svg>
