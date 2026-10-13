@@ -7,6 +7,7 @@ import { ArrowLeft, Save, UserRound } from "lucide-react";
 import { toastOnce } from "@/lib/toast";
 import { authClient } from "@/lib/auth-client";
 export default function UpdateProfilePage() {
+  
   const router = useRouter();
   const { data: session, isPending } = authClient.useSession();
   const [name, setName] = useState("");
