@@ -44,5 +44,6 @@ export function banglaDate(date = new Date()): string {
     day: "numeric",
     month: "long",
     year: "numeric",
+    timeZone: "Asia/Dhaka",
   }).format(date);
 }
